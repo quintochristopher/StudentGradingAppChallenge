@@ -11,8 +11,14 @@ This C# console application is designed to:
     - divides the values of extra credit assignments by 10 before adding extra credit scores to the sum of exam scores.
 - Calculates the average of all exams that are included in examAssignments (the first 5) and displays it in the Exam Score column
 - Calculates the average of all extra credit scores and displays it in the Extra Credit column
-    -The total points is calculated by dividing the 10% of the sum of extra credit scores by the total exam assignments not including the extra credit exams.
-      Basically, (extraCreditScores / 10) / examAssignments.
+    -The total points is calculated by dividing the 10% of the sum of extra credit scores by the total exam assignments not including the extra credit exams. Basically, (extraCreditScores / 10) / examAssignments.
+-New variables
+    -extraCredit contains the 10% of every extra credit exam
+    -extraCreditCount is the total number of extra credit exams
+    -examScore is the sum of all normal exams
+    -extraCreditScores is the sum of all extra credit scores
+    -extraCreditAverage = extraCreditScore / extraCreditCount
+    -extraCreditPoints is the total points added to the exam score making up the overall grade. Ex: extraCreditPoints = 3.68; 92.2 + 3.68 = 95.88
 - use the following report format to report student grades:
 
   Student         Exam Score      Overall Grade   Extra Credit
@@ -65,13 +71,12 @@ foreach (string name in studentNames)
 
     int gradedAssignments = 0;
 
-
-    decimal extraCredit = 0; //Contains the 10% of every extra credit exam
-    int extraCreditCount = studentScores.Length - examAssignments; //The total number of extra credit exams
-    decimal examScore = 0; //The sum of all normal exams
-    decimal extraCreditScores = 0; //The sum of all extra credit scores
-    int extraCreditAverage = 0;  //extraCreditScore / extraCreditCount
-    decimal extraCreditPoints = 0; //The total points added to the exam score making up the overall grade. Ex: extraCreditPoints = 3.68; 92.2 + 3.68 = 95.88
+    decimal extraCredit = 0; 
+    int extraCreditCount = studentScores.Length - examAssignments; 
+    decimal examScore = 0; 
+    decimal extraCreditScores = 0; 
+    int extraCreditAverage = 0;  
+    decimal extraCreditPoints = 0;
 
     /*
     the inner foreach loop sums assignment scores
@@ -90,7 +95,6 @@ foreach (string name in studentNames)
         }
            
     }
-
 
     sumAssignmentScores = examScore + extraCredit;
     examScore /= examAssignments; //The average of the normal exam score
