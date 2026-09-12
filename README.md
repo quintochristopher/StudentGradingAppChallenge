@@ -1,6 +1,6 @@
 ### Student Grading App - Challenge
 
-Another upgrade of [Student Grading App Upgrade](https://github.com/quintochristopher/StudentGradingUpgraded.git). This time, it is not guided anymore. The developer needs to figure out how to implement the specified requirements. Compared to the previous, this console applications adds the average calculation of the normal exams, the average calculation of the extra credit exams, and the calculation of the total extra credit points added to the overall grade. This one unexpectedly challenged me, as I struggled which variables to create and how to name them in a way that it's purpose is clear. I also struggled with the calculation of the total extra credit points added but managed to get it in the end.
+Another upgrade of [Student Grading App Upgrade](https://github.com/quintochristopher/StudentGradingUpgraded.git). This time, it is not guided anymore. The developer needs to figure out how to implement the specified requirements. Compared to the previous, this console application adds the average calculation of the normal exams, the average calculation of the extra credit exams, and the calculation of the total extra credit points added to the overall grade. This one unexpectedly challenged me, as I struggled which variables to create and how to name them in a way that it's purpose is clear. I also struggled with the calculation of the total extra credit points added but managed to get it in the end.
 
 Output:
 
